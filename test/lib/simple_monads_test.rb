@@ -49,4 +49,12 @@ class SimpleMonadsTest < Minitest::Test
 
     assert_nil(result.success)
   end
+
+  def test_success_or
+    result_success = @object.return_success
+    result_failure = @object.return_failure
+
+    assert_equal(7, result_failure.success_or(7))
+    assert_equal(5, result_success.success_or(14.54))
+  end
 end

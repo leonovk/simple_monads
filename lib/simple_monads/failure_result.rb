@@ -1,14 +1,11 @@
 # frozen_string_literal: true
 
+require_relative 'base_result'
+
 module SimpleMonads
   # failure object
-  class FailureObject
-    attr_reader :object
+  class FailureResult < BaseResult
     alias failure object
-
-    def initialize(object = nil)
-      @object = object
-    end
 
     def failure?
       true
@@ -16,10 +13,6 @@ module SimpleMonads
 
     def success?
       false
-    end
-
-    def inspect
-      "Failure(#{object})"
     end
   end
 end

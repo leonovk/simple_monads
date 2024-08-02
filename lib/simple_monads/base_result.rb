@@ -1,25 +1,20 @@
 # frozen_string_literal: true
 
 module SimpleMonads
-  # success object
-  class SuccessObject
+  # Base Result monads
+  class BaseResult
     attr_reader :object
-    alias success object
 
     def initialize(object = nil)
       @object = object
     end
 
-    def failure?
-      false
-    end
-
-    def success?
-      true
+    def success_or(value)
+      failure? ? value : success
     end
 
     def inspect
-      "Success(#{object})"
+      "#{self.class.to_s[14..-7]}(#{object})"
     end
   end
 end
