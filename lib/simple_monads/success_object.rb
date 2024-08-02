@@ -6,7 +6,7 @@ module SimpleMonads
     attr_reader :object
     alias success object
 
-    def initialize(object)
+    def initialize(object = nil)
       @object = object
     end
 

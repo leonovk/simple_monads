@@ -5,11 +5,11 @@ require_relative 'simple_monads/success_object'
 
 # Main module
 module SimpleMonads
-  def Success(object) # rubocop:disable Naming/MethodName
+  def Success(object = nil) # rubocop:disable Naming/MethodName
     SuccessObject.new(object)
   end
 
-  def Failure(object) # rubocop:disable Naming/MethodName
+  def Failure(object = nil) # rubocop:disable Naming/MethodName
     FailureObject.new(object)
   end
 end

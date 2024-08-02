@@ -12,6 +12,10 @@ class SomeClass
   def return_success
     Success(5)
   end
+
+  def return_empty_success
+    Success()
+  end
 end
 
 class SimpleMonadsTest < Minitest::Test
@@ -35,5 +39,14 @@ class SimpleMonadsTest < Minitest::Test
     refute_predicate result, :failure?
 
     assert_equal(5, result.success)
+  end
+
+  def test_empty_success
+    result = @object.return_empty_success
+
+    assert_predicate result, :success?
+    refute_predicate result, :failure?
+
+    assert_equal(nil, result.success)
   end
 end
