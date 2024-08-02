@@ -1,0 +1,2 @@
+module SimpleMonads
+end
