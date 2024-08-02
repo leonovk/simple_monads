@@ -9,6 +9,7 @@ Rake::TestTask.new(:test) do |t|
   t.test_files = FileList['test/**/*_test.rb']
 end
 
+desc 'build and push gem versions'
 task :build_and_push do
   puts "build simple_monads #{SimpleMonads::VERSION}"
   system 'gem build simple_monads.gemspec'
