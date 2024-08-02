@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.name        = 'simple_monads'
   s.version     = SimpleMonads::VERSION
   s.summary     = 'Simple monads'
-  s.description = 'Simple monads without drive dependencies'
+  s.description = 'Simple monads without DRY dependencies'
   s.authors     = ['Kirill Leonov']
   s.email       = 'leonov835@yandex.ru'
   s.files       = Dir.glob('lib/**/*')

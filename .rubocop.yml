@@ -1,0 +1,11 @@
+require:
+  - rubocop-minitest
+
+AllCops:
+  NewCops: enable
+
+Gemspec/RequireMFA:
+  Enabled: false
+
+Gemspec/RequiredRubyVersion:
+  Enabled: false
