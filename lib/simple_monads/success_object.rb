@@ -4,6 +4,7 @@ module SimpleMonads
   # success object
   class SuccessObject
     attr_reader :object
+    alias success object
 
     def initialize(object)
       @object = object
