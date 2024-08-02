@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    simple_monads (0.1.3)
+    simple_monads (1.0.1)
 
 GEM
   remote: https://rubygems.org/

@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
 module SimpleMonads
-  VERSION = '0.1.4'
+  # gem version
+  VERSION = '1.0.1'
 end

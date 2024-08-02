@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
-require_relative 'simple_monads/failure_object'
-require_relative 'simple_monads/success_object'
+require_relative 'simple_monads/failure_result'
+require_relative 'simple_monads/success_result'
 
 # Main module
 module SimpleMonads
   def Success(object = nil) # rubocop:disable Naming/MethodName
-    SuccessObject.new(object)
+    SuccessResult.new(object)
   end
 
   def Failure(object = nil) # rubocop:disable Naming/MethodName
-    FailureObject.new(object)
+    FailureResult.new(object)
   end
 end

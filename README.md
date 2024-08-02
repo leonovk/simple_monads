@@ -12,11 +12,15 @@ gem 'simple_monads'
 
 And then execute:
 
-```bundle install```
+```bash
+bundle install
+```
 
 Or install it yourself as:
 
-```gem install simple_monads```
+```bash
+gem install simple_monads
+```
 
 Require if necessary:
 
@@ -44,14 +48,37 @@ end
 
 Then using this object you can check and use monads:
 
+***Failure examples***
+
 ```ruby
 object = SomeClass.new
+
 result = object.return_failure
+
 result.failure? # true
+
+result.success? # false
+
 result.failure # { error: 'text' }
+
+result.success_or(19.32) # 19.32
 ```
 
-The successful scenario is exactly the same.
+***Success examples***
+
+```ruby
+object = SomeClass.new
+
+result = object.return_success
+
+result.failure? # false
+
+result.success? # true
+
+result.success # 5
+
+result.success_or(19.32) # 5
+```
 
 ## Contribution
 
