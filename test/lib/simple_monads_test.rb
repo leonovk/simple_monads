@@ -47,6 +47,6 @@ class SimpleMonadsTest < Minitest::Test
     assert_predicate result, :success?
     refute_predicate result, :failure?
 
-    assert_equal(nil, result.success)
+    assert_nil(result.success)
   end
 end
